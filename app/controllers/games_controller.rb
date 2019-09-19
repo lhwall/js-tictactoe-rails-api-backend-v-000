@@ -25,5 +25,5 @@ end
 private
 
 def strong_params
-  params.require(:state)
+  params.permit(:state)
 end
