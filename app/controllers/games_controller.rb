@@ -2,7 +2,6 @@ class GamesController < ApplicationController
   # Add your GamesController code here
 
   def create
-byebug
       @game = Game.create(strong_params)
       render json: @game.to_json
   end
