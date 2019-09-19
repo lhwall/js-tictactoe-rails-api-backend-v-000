@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   # Add your GamesController code here
 
   def create
-      @game = Game.create(strong_params)
+      @game = Game.create(game_params)
       byebug
       render json: @game.to_json
   end
@@ -24,7 +24,7 @@ class GamesController < ApplicationController
 
 private
 
-def strong_params
+def game_params
   params.permit(:state)
 end
 
