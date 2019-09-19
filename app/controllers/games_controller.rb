@@ -25,5 +25,5 @@ end
 private
 
 def strong_params(params)
-  params.permit :state 
-end 
+  params.permit :state
+end
