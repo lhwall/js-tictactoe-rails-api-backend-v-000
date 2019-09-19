@@ -3,7 +3,7 @@ class GamesController < ApplicationController
 
   def create
 byebug
-      @game = Game.create(params)
+      @game = Game.create(strong_params)
       render json: @game.to_json
   end
 
@@ -23,3 +23,7 @@ byebug
 end
 
 private
+
+def strong_params(params)
+  params.permit :state 
+end 
