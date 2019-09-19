@@ -20,10 +20,12 @@ class GamesController < ApplicationController
   def index
   end
 
-end
+
 
 private
 
 def strong_params
   params.permit(:state)
+end
+
 end
