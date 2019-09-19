@@ -3,6 +3,7 @@ class GamesController < ApplicationController
 
   def create
       @game = Game.create(strong_params)
+      byebug
       render json: @game.to_json
   end
 
